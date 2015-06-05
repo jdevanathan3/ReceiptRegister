@@ -14,6 +14,11 @@
 		698E36951B2258E200B2AD03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698E36941B2258E200B2AD03 /* Images.xcassets */; };
 		698E36981B2258E200B2AD03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 698E36961B2258E200B2AD03 /* LaunchScreen.xib */; };
 		698E36A41B2258E200B2AD03 /* ReceiptRegisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36A31B2258E200B2AD03 /* ReceiptRegisterTests.m */; };
+		698E36B71B22592A00B2AD03 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36AE1B22592A00B2AD03 /* EntryViewController.m */; };
+		698E36B81B22592A00B2AD03 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36B01B22592A00B2AD03 /* Event.m */; };
+		698E36B91B22592A00B2AD03 /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36B21B22592A00B2AD03 /* EventTableViewController.m */; };
+		698E36BA1B22592A00B2AD03 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36B41B22592A00B2AD03 /* Expense.m */; };
+		698E36BB1B22592A00B2AD03 /* ExpenseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36B61B22592A00B2AD03 /* ExpenseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,16 @@
 		698E369D1B2258E200B2AD03 /* ReceiptRegisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptRegisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		698E36A21B2258E200B2AD03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		698E36A31B2258E200B2AD03 /* ReceiptRegisterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptRegisterTests.m; sourceTree = "<group>"; };
+		698E36AD1B22592A00B2AD03 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		698E36AE1B22592A00B2AD03 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		698E36AF1B22592A00B2AD03 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		698E36B01B22592A00B2AD03 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		698E36B11B22592A00B2AD03 /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
+		698E36B21B22592A00B2AD03 /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
+		698E36B31B22592A00B2AD03 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
+		698E36B41B22592A00B2AD03 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
+		698E36B51B22592A00B2AD03 /* ExpenseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseTableViewController.h; sourceTree = "<group>"; };
+		698E36B61B22592A00B2AD03 /* ExpenseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +96,16 @@
 		698E36861B2258E200B2AD03 /* ReceiptRegister */ = {
 			isa = PBXGroup;
 			children = (
+				698E36B61B22592A00B2AD03 /* ExpenseTableViewController.m */,
+				698E36AD1B22592A00B2AD03 /* EntryViewController.h */,
+				698E36AE1B22592A00B2AD03 /* EntryViewController.m */,
+				698E36AF1B22592A00B2AD03 /* Event.h */,
+				698E36B01B22592A00B2AD03 /* Event.m */,
+				698E36B11B22592A00B2AD03 /* EventTableViewController.h */,
+				698E36B21B22592A00B2AD03 /* EventTableViewController.m */,
+				698E36B31B22592A00B2AD03 /* Expense.h */,
+				698E36B41B22592A00B2AD03 /* Expense.m */,
+				698E36B51B22592A00B2AD03 /* ExpenseTableViewController.h */,
 				698E368B1B2258E200B2AD03 /* AppDelegate.h */,
 				698E368C1B2258E200B2AD03 /* AppDelegate.m */,
 				698E368E1B2258E200B2AD03 /* ViewController.h */,
@@ -219,8 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				698E36B91B22592A00B2AD03 /* EventTableViewController.m in Sources */,
 				698E36901B2258E200B2AD03 /* ViewController.m in Sources */,
+				698E36B71B22592A00B2AD03 /* EntryViewController.m in Sources */,
+				698E36B81B22592A00B2AD03 /* Event.m in Sources */,
+				698E36BA1B22592A00B2AD03 /* Expense.m in Sources */,
 				698E368D1B2258E200B2AD03 /* AppDelegate.m in Sources */,
+				698E36BB1B22592A00B2AD03 /* ExpenseTableViewController.m in Sources */,
 				698E368A1B2258E200B2AD03 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
