@@ -7,14 +7,18 @@
 //
 
 #import "Expense.h"
-
+static int savedExpenseAmount;
 @implementation Expense
--(id) initWithName: (NSString *)name
-              cost: (float) cost
-{
-    self.name = name;
-    self.amountTotal = cost;
-    self.cost = [NSString stringWithFormat:@"%.02f", self.amountTotal];
-    return self;
++(NSString *) determineID {
+    return @"expense";
+}
++(void) incrementSavedAmount {
+    savedExpenseAmount++;
+}
++(int) getSavedAmount {
+    return savedExpenseAmount;
+}
++(void) setSavedAmount:(int) num {
+    savedExpenseAmount = num;
 }
 @end

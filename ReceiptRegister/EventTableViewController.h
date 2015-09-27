@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "InputViewController.h"
+#import "User.h"
 @interface EventTableViewController : UITableViewController
-@property(strong, retain) NSMutableArray *events;
-@property(strong, retain) NSMutableArray *expenseControllers;
+//@property(strong, retain) NSMutableArray *events;
+@property(strong, nonatomic) User *user;
+//@property(strong, retain) NSMutableArray *expenseControllers;
+@property(strong, retain) UIAlertController *eventInput;
+@property(strong, retain) InputViewController *tempController;
 @property int numRows;
+@property BOOL isEditable;
+-(void) saveData;
 @end

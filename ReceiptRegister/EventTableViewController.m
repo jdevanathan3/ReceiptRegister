@@ -9,6 +9,9 @@
 #import "EventTableViewController.h"
 #import "Event.h"
 #import "ExpenseTableViewController.h"
+#import "EventInputViewController.h"
+#import "PricedTableItem.h"
+//#import "DETransitioningDelegate.h"
 
 @interface EventTableViewController ()
 
@@ -20,31 +23,75 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+
         self.title = @"Events";
-        self.events = [NSMutableArray array];
-        self.expenseControllers = [NSMutableArray array];
-        self.numRows = [self.events count];
+        self.user = [User getData];//[NSMutableArray array];
+        if(self.user == nil) {
+            self.user = [[User alloc] initWithEvents:[[NSArray alloc] init]];
+        }
+        //self.expenseControllers = [NSMutableArray array];
+        self.numRows = [self.user.events count];
         UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+        UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editNewObject:)];
         self.navigationItem.rightBarButtonItem = addButton;
-        
-        //self.events = @[@"Event1", @"Event2", @"Event3", @"Event4", @"Event5"];
-        //NSLog(self.events);
+        self.navigationItem.leftBarButtonItem = editButton;
+        self.isEditable = NO;
+        /*[[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(saveData)
+                                                     name:@"UIApplicationWillResignActiveNotification"
+                                                   object:nil];*/
     }
     return self;
 }
 -(void) insertNewObject:(id) sender {
-    [self updateTableForRow:self.numRows];
+    self.providesPresentationContextTransitionStyle = YES;
+    self.definesPresentationContext = YES;
+    [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    self.tempController = [[EventInputViewController alloc] init];
+    [self presentViewController:self.tempController animated:YES completion:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateTable)
+                                                 name:@"Input updated."
+                                               object:nil];
+    /*self.eventInput = [UIAlertController alertControllerWithTitle:@"Event Name"
+                                                                   message:@"Please enter an event name and date."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              [[NSNotificationCenter defaultCenter] postNotificationName: @"Event Input updated."
+                                                                                                                  object:nil];
+                                                          }];
+    
+    [self.eventInput addAction:defaultAction];
+    
+    [self.eventInput addTextFieldWithConfigurationHandler:^(UITextField *text) {
+        text.placeholder = @"Event Name";
+    }];
+
+    [self presentViewController:self.eventInput animated:YES completion:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateTable)
+                                                 name:@"Event Input updated."
+                                               object:nil];*/
+    //ADD SOME WAY TO CANCEL UPDATE
+}
+-(void) editNewObject:(id) sender {
+    self.isEditable = YES;
+}
+
+-(void) updateTable {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSMutableArray *arr = [self.user.events mutableCopy];
+    [arr insertObject:self.tempController.item atIndex:0];
+    self.user.events = [arr copy];
     self.numRows++;
     [self.tableView reloadData];
 }
-// REMAKE THIS METHOD
--(void) updateTableForRow:(int) x {
-    NSString *event = [NSString stringWithFormat:@"Event%d", x];
-    Event *e = [[Event alloc] initWithName:event];
-    ExpenseTableViewController *eVC = [[ExpenseTableViewController alloc] init];
-    [self.events insertObject:e atIndex:x];
-    [self.expenseControllers insertObject:eVC atIndex:x];
+-(void) updateTableEdited {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.tableView reloadData];
 }
 //
 - (void)viewDidLoad
@@ -57,7 +104,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
+-(void) saveData {
+    [User saveData:self.user];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -82,11 +131,28 @@
 
 -(void) tableView:(UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath
 {
-    ExpenseTableViewController *newView = self.expenseControllers[indexPath.row];
-    newView.title = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-    newView.event = self.events[indexPath.row];
-    newView.refreshTableView = self.tableView;
-    [self.navigationController pushViewController:newView animated:YES];
+    if(self.isEditable) {
+        self.isEditable = NO;
+        self.providesPresentationContextTransitionStyle = YES;
+        self.definesPresentationContext = YES;
+        [self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+        //http://stackoverflow.com/questions/2578614/transparent-background-with-a-modal-uiviewcontroller
+        //EventDurationViewController *newView = [[EventDurationViewController alloc] init];
+//        id <UIViewControllerTransitioningDelegate> myDelegate = [DETransitioningDelegate new];
+ //       newView.transitioningDelegate = myDelegate;
+        self.tempController = [[EventInputViewController alloc] initWithData:[self.user.events objectAtIndex:indexPath.row]];
+        [self presentViewController:self.tempController animated:YES completion:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(updateTableEdited)
+                                                     name:@"Input updated."
+                                                   object:nil];
+    } else {
+        ExpenseTableViewController *newView = [[ExpenseTableViewController alloc] init];//self.expenseControllers[indexPath.row];
+        newView.title = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+        newView.event = self.user.events[indexPath.row];
+        newView.refreshTableView = self.tableView;
+        [self.navigationController pushViewController:newView animated:YES];
+    }
     return;
 }
 
@@ -96,41 +162,46 @@
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     }
-    Event *e = self.events[indexPath.row];
+    Event *e = self.user.events[indexPath.row];
     cell.textLabel.text = e.name;
     cell.detailTextLabel.text = e.cost;
     // Configure the cell...
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        self.numRows--;
+        NSMutableArray *arr = [self.user.events mutableCopy];
+        [arr removeObjectAtIndex:indexPath.row];
+        self.user.events = [arr copy];
+        //[self.expenseControllers removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    NSLog(@"OVERRIDDEN");
 }
-*/
+
 
 /*
 // Override to support conditional rearranging of the table view.

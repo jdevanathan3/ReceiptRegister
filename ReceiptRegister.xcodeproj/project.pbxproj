@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		691B9D7E1B5B3CDA00774068 /* EventInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9D7D1B5B3CDA00774068 /* EventInputViewController.m */; };
+		691B9D811B5B3E6100774068 /* ExpenseInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9D801B5B3E6100774068 /* ExpenseInputViewController.m */; };
+		691B9D841B5B3EC200774068 /* PricedTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 691B9D831B5B3EC200774068 /* PricedTableItem.m */; };
+		698683B11B250E0700F0FB96 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698683B01B250E0700F0FB96 /* InputViewController.m */; };
 		698E368A1B2258E200B2AD03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36891B2258E200B2AD03 /* main.m */; };
 		698E368D1B2258E200B2AD03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E368C1B2258E200B2AD03 /* AppDelegate.m */; };
 		698E36901B2258E200B2AD03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E368F1B2258E200B2AD03 /* ViewController.m */; };
@@ -14,11 +18,14 @@
 		698E36951B2258E200B2AD03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698E36941B2258E200B2AD03 /* Images.xcassets */; };
 		698E36981B2258E200B2AD03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 698E36961B2258E200B2AD03 /* LaunchScreen.xib */; };
 		698E36A41B2258E200B2AD03 /* ReceiptRegisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36A31B2258E200B2AD03 /* ReceiptRegisterTests.m */; };
-		698E36B71B22592A00B2AD03 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36AE1B22592A00B2AD03 /* EntryViewController.m */; };
 		698E36B81B22592A00B2AD03 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36B01B22592A00B2AD03 /* Event.m */; };
 		698E36B91B22592A00B2AD03 /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36B21B22592A00B2AD03 /* EventTableViewController.m */; };
 		698E36BA1B22592A00B2AD03 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36B41B22592A00B2AD03 /* Expense.m */; };
 		698E36BB1B22592A00B2AD03 /* ExpenseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E36B61B22592A00B2AD03 /* ExpenseTableViewController.m */; };
+		69A994CD1B6AF30600F0BEC6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A994CC1B6AF30600F0BEC6 /* User.m */; };
+		69FF4E1C1B6086A80061F673 /* pineapple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 69FF4E1B1B6086A80061F673 /* pineapple.jpg */; };
+		69FF4E1E1B6087880061F673 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 69FF4E1D1B6087880061F673 /* profile.png */; };
+		69FF4E211B608A010061F673 /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69FF4E201B608A010061F673 /* FavoritesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		691B9D7C1B5B3CDA00774068 /* EventInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventInputViewController.h; sourceTree = "<group>"; };
+		691B9D7D1B5B3CDA00774068 /* EventInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventInputViewController.m; sourceTree = "<group>"; };
+		691B9D7F1B5B3E6100774068 /* ExpenseInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseInputViewController.h; sourceTree = "<group>"; };
+		691B9D801B5B3E6100774068 /* ExpenseInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseInputViewController.m; sourceTree = "<group>"; };
+		691B9D821B5B3EC200774068 /* PricedTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricedTableItem.h; sourceTree = "<group>"; };
+		691B9D831B5B3EC200774068 /* PricedTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PricedTableItem.m; sourceTree = "<group>"; };
+		698683AF1B250E0700F0FB96 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
+		698683B01B250E0700F0FB96 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
 		698E36841B2258E200B2AD03 /* ReceiptRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		698E36881B2258E200B2AD03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		698E36891B2258E200B2AD03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,8 +60,6 @@
 		698E369D1B2258E200B2AD03 /* ReceiptRegisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptRegisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		698E36A21B2258E200B2AD03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		698E36A31B2258E200B2AD03 /* ReceiptRegisterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptRegisterTests.m; sourceTree = "<group>"; };
-		698E36AD1B22592A00B2AD03 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
-		698E36AE1B22592A00B2AD03 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 		698E36AF1B22592A00B2AD03 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		698E36B01B22592A00B2AD03 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		698E36B11B22592A00B2AD03 /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
@@ -55,6 +68,12 @@
 		698E36B41B22592A00B2AD03 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
 		698E36B51B22592A00B2AD03 /* ExpenseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseTableViewController.h; sourceTree = "<group>"; };
 		698E36B61B22592A00B2AD03 /* ExpenseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseTableViewController.m; sourceTree = "<group>"; };
+		69A994CB1B6AF30600F0BEC6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		69A994CC1B6AF30600F0BEC6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		69FF4E1B1B6086A80061F673 /* pineapple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pineapple.jpg; sourceTree = "<group>"; };
+		69FF4E1D1B6087880061F673 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		69FF4E1F1B608A010061F673 /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
+		69FF4E201B608A010061F673 /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,16 +115,28 @@
 		698E36861B2258E200B2AD03 /* ReceiptRegister */ = {
 			isa = PBXGroup;
 			children = (
+				69FF4E1D1B6087880061F673 /* profile.png */,
+				69FF4E1B1B6086A80061F673 /* pineapple.jpg */,
+				698E36B51B22592A00B2AD03 /* ExpenseTableViewController.h */,
 				698E36B61B22592A00B2AD03 /* ExpenseTableViewController.m */,
-				698E36AD1B22592A00B2AD03 /* EntryViewController.h */,
-				698E36AE1B22592A00B2AD03 /* EntryViewController.m */,
-				698E36AF1B22592A00B2AD03 /* Event.h */,
-				698E36B01B22592A00B2AD03 /* Event.m */,
 				698E36B11B22592A00B2AD03 /* EventTableViewController.h */,
 				698E36B21B22592A00B2AD03 /* EventTableViewController.m */,
+				698683AF1B250E0700F0FB96 /* InputViewController.h */,
+				698683B01B250E0700F0FB96 /* InputViewController.m */,
+				69FF4E1F1B608A010061F673 /* FavoritesTableViewController.h */,
+				69FF4E201B608A010061F673 /* FavoritesTableViewController.m */,
+				691B9D7C1B5B3CDA00774068 /* EventInputViewController.h */,
+				691B9D7D1B5B3CDA00774068 /* EventInputViewController.m */,
+				691B9D7F1B5B3E6100774068 /* ExpenseInputViewController.h */,
+				691B9D801B5B3E6100774068 /* ExpenseInputViewController.m */,
+				698E36AF1B22592A00B2AD03 /* Event.h */,
+				698E36B01B22592A00B2AD03 /* Event.m */,
 				698E36B31B22592A00B2AD03 /* Expense.h */,
 				698E36B41B22592A00B2AD03 /* Expense.m */,
-				698E36B51B22592A00B2AD03 /* ExpenseTableViewController.h */,
+				691B9D821B5B3EC200774068 /* PricedTableItem.h */,
+				691B9D831B5B3EC200774068 /* PricedTableItem.m */,
+				69A994CB1B6AF30600F0BEC6 /* User.h */,
+				69A994CC1B6AF30600F0BEC6 /* User.m */,
 				698E368B1B2258E200B2AD03 /* AppDelegate.h */,
 				698E368C1B2258E200B2AD03 /* AppDelegate.m */,
 				698E368E1B2258E200B2AD03 /* ViewController.h */,
@@ -226,6 +257,8 @@
 			files = (
 				698E36931B2258E200B2AD03 /* Main.storyboard in Resources */,
 				698E36981B2258E200B2AD03 /* LaunchScreen.xib in Resources */,
+				69FF4E1C1B6086A80061F673 /* pineapple.jpg in Resources */,
+				69FF4E1E1B6087880061F673 /* profile.png in Resources */,
 				698E36951B2258E200B2AD03 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +277,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A994CD1B6AF30600F0BEC6 /* User.m in Sources */,
 				698E36B91B22592A00B2AD03 /* EventTableViewController.m in Sources */,
+				691B9D841B5B3EC200774068 /* PricedTableItem.m in Sources */,
 				698E36901B2258E200B2AD03 /* ViewController.m in Sources */,
-				698E36B71B22592A00B2AD03 /* EntryViewController.m in Sources */,
+				69FF4E211B608A010061F673 /* FavoritesTableViewController.m in Sources */,
 				698E36B81B22592A00B2AD03 /* Event.m in Sources */,
 				698E36BA1B22592A00B2AD03 /* Expense.m in Sources */,
+				691B9D811B5B3E6100774068 /* ExpenseInputViewController.m in Sources */,
 				698E368D1B2258E200B2AD03 /* AppDelegate.m in Sources */,
 				698E36BB1B22592A00B2AD03 /* ExpenseTableViewController.m in Sources */,
+				698683B11B250E0700F0FB96 /* InputViewController.m in Sources */,
 				698E368A1B2258E200B2AD03 /* main.m in Sources */,
+				691B9D7E1B5B3CDA00774068 /* EventInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +486,7 @@
 				698E36A91B2258E200B2AD03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		698E36AA1B2258E200B2AD03 /* Build configuration list for PBXNativeTarget "ReceiptRegisterTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +495,7 @@
 				698E36AC1B2258E200B2AD03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,11 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface Expense : NSObject
-@property(strong, nonatomic) NSString *name;
-@property(strong, nonatomic) NSString *cost;
--(id)initWithName:(NSString *)name
-             cost:(float) cost;
-@property float amountTotal;
+#import "PricedTableItem.h"
+@interface Expense : PricedTableItem
 @end

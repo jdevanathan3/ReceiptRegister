@@ -13,18 +13,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    self.eventTable = [[EventTableViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc]
-                                   initWithRootViewController:[[EventTableViewController alloc] init]];
-    self.window.rootViewController = nav;
+                                   initWithRootViewController:self.eventTable];
+    tabBar.viewControllers = @[nav, [[InputViewController alloc] init]];
+    nav.tabBarItem.image = [UIImage imageNamed:@"profile.png"];
+    self.window.rootViewController = tabBar;
     //self.window. bounds = CGRectMake(0, 20, self.window.bounds.size.width, self.window.bounds.size.height - 20);
     //[self.window.rootViewController.view setBackgroundColor:[UIColor whiteColor]];
     //self.rootViewController
+    //[NSKeyedArchiver archiveRootObject:user toFile:[User getPathToArchive]];
+    //User *user = [NSKeyedUnarchiver unarchiveObjectWithFile:[User getPathToArchive]];
     [self.window makeKeyAndVisible];
     return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
+    [self.eventTable saveData];
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }

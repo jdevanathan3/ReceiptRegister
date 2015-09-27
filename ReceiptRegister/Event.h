@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface Event : NSObject
-@property(strong, nonatomic) NSString *name;
-@property(strong, nonatomic) NSString *cost;
-@property float amountTotal;
+#import "PricedTableItem.h"
+@interface Event : PricedTableItem <NSCoding>
 @property(strong, nonatomic) NSMutableArray *expenses;
+@property(strong, nonatomic) NSDate *startDate;
+@property(strong, nonatomic) NSDate *endDate;
 -(id)initWithName:(NSString *)name;
 -(void) updateCost;
-
 @end

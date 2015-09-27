@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1D92A0C2-FB06-4E10-8D7E-1D5C95B9A618</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ReceiptRegister</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8C2D52AC32A2B5FC44D310D44CC601FAB92F69AC</key>
+		<string>https://github.com/jdevanathan3/ReceiptRegister.git</string>
+		<key>B09FF094DAA8C0F7DDDF9366748C86EBE4B36C1F</key>
+		<string>https://github.com/jdevanathan3/ReceiptRegister.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ReceiptRegister.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8C2D52AC32A2B5FC44D310D44CC601FAB92F69AC</key>
+		<string>../..ReceiptRegister</string>
+		<key>B09FF094DAA8C0F7DDDF9366748C86EBE4B36C1F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jdevanathan3/ReceiptRegister.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B09FF094DAA8C0F7DDDF9366748C86EBE4B36C1F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B09FF094DAA8C0F7DDDF9366748C86EBE4B36C1F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ReceiptRegister</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8C2D52AC32A2B5FC44D310D44CC601FAB92F69AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ReceiptRegisterReceiptRegister</string>
+		</dict>
+	</array>
+</dict>
+</plist>
